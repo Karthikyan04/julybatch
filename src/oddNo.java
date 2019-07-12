@@ -11,12 +11,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class oddNo {
 
-	public  void main(String args[]) throws AWTException, InterruptedException 
+
+	public static void main(String[] args) throws InterruptedException, AWTException 
 	{
-		
-			System.setProperty("webdriver.chrome.driver","C:\\Yalini\\Yals\\julybatch\\driver\\chromedriver.exe" );
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\Raji\\git\\julybatch\\julybatch\\julybatch\\driver\\chromedriver.exe");
 			WebDriver driver = new ChromeDriver();
 			driver.get("https://www.flipkart.com/");
+		WebElement ra=driver.findElement(By.xpath("(//input[@type='text'])[2]"));
+		ra.sendKeys("rajechandran777@gmail.com");
+		WebElement r1=driver.findElement(By.xpath("//input[@type='password']"));
+		r1.sendKeys("Raje@143");
+		WebElement r2=driver.findElement(By.xpath("(//button[@type='submit'])[2]"));
+		r2.click();
 			driver.manage().window().maximize();
 		    driver.findElement(By.xpath("//input[@type='text']")).sendKeys("Mobiles");
 		    Robot r = new Robot();
@@ -33,6 +39,4 @@ public class oddNo {
 					}
 					int s = mob.size();
 					System.out.println(s);
-		}
-		}
-	
+		}}
