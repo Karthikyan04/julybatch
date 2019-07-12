@@ -1,18 +1,18 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class evenNo {
 
-	public  void main(String args[]) 
-	{
-		int sum = 0;
-		for (int i = 1; i <= 100; i++) 
-		{
-			if (i % 2 != 0) 
-			{
-				sum = sum + i;
-			}
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\ELCOT\\eclipse-workspace\\julybatch\\driver\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.flipkart.com/");
+		driver.manage().window().maximize();
+		WebElement mobile= driver.findElement(By.xpath("//input[@type='text']"));
+        mobile.sendKeys("Oneplus Mobile");
+		WebElement btn= driver.findElement(By.xpath("//button[@type='submit']"));
+		btn.click();
 		}
-		System.out.println("The Sum Of 100 Odd Numbers are:" + sum);
-	}
-	
-	
 }
