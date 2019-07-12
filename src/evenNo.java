@@ -12,7 +12,9 @@ public class evenNo {
 		driver.manage().window().maximize();
 		WebElement mobile= driver.findElement(By.xpath("//input[@type='text']"));
         mobile.sendKeys("Oneplus Mobile");
-		WebElement btn= driver.findElement(By.xpath("//button[@type='submit']"));
-		btn.click();
-		}
-}
+        Robot r = new Robot();
+	    r.keyPress(KeyEvent.VK_ENTER);
+	    r.keyRelease(KeyEvent.VK_ENTER);
+	    Thread.sleep(3000);
+	driver.close();
+	}
