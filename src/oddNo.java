@@ -1,18 +1,17 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class oddNo {
 
 	public  void main(String args[]) 
 	{
-		int sum = 0;
-		for (int i = 1; i <= 100; i++) 
-		{
-			if (i % 2 != 0) 
-			{
-				sum = sum + i;
-			}
+		
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\Lakshmi\\git\\julybatch\\src\\Login.java" );
+			WebDriver driver = new ChromeDriver();
+			driver.get("https://www.flipkart.com/");
+			
 		}
-		System.out.println("The Sum Of 100 Odd Numbers are:" + sum);
-	}
-	
 	
 }
