@@ -37,8 +37,10 @@ public class oddNo {
 						String text = x.getText();	
 						System.out.println(text);
 					}
-					int s = mob.size();
-					System.out.println(s);
-					driver.quit();
+					int s1 = mob.size();
+				System.out.println(s1);
+					//driver.quit();
+					
+					
 					
 		}}
