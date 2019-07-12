@@ -39,4 +39,6 @@ public class oddNo {
 					}
 					int s = mob.size();
 					System.out.println(s);
+					driver.quit();
+					
 		}}
